@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[show edit update destroy]
+  allow_unauthenticated_access only: %i[ index show ]
+  before_action :set_product, only: %i[ show edit update destroy ]
   def index
     @products = Product.all
   end
@@ -24,7 +25,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product = Product.find(params[:id])
     if @product.update(product_params)
       redirect_to @product
     else

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[8.0].define(version: 2025_08_01_055139) do
+=======
+ActiveRecord::Schema[8.0].define(version: 2025_08_01_115017) do
+>>>>>>> 3da9a90 (crud products, authentication)
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
